@@ -1,0 +1,166 @@
+<!doctype>
+
+<html>
+  <head>
+    <meta charset='utf-8'> 
+    <title>Graffiti-Core</title>
+
+    <style>
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+}
+
+.wrapper {
+  width: 720px;
+  margin: 30px auto 0px;
+  padding: 30px;
+  border: 1px solid #aaa;
+  background: #f5f5f5;
+
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.wrapper h1 {
+  margin: 0px 16px;
+  padding: 0px;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.wrapper hr {
+  height: 1px;
+  margin: 16px 0px;
+  padding: 0px;
+  border: none;
+  background: #d5d5d5;
+}
+
+.wrapper a {
+  color: #08c;
+  text-decoration: none;
+}
+
+.wrapper a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+
+#interactive {
+  height: 320px;
+  margin-bottom: 20px;
+}
+
+#tutorial {
+  float: left;
+  width: 40%;
+  height: 290px;
+  margin: 0px;
+  margin-right: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  outline: none;
+  overflow: auto;
+  font-size: 10px;
+  line-height: 12px;
+
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+}
+
+#console {
+  width: 300px;
+  padding: 2px 8px;
+  border: 1px solid #ccc;
+  outline: none;
+
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+#graffiti {
+  padding: 1px;
+  background: #fff;
+  border: 1px dashed #aaa;
+}
+    </style>
+
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/graffiti-core.js"></script>
+
+    <script>
+      $(document).ready(function() {        
+        gc = new GraffitiCore({
+          selector: '#graffiti',
+
+          width: 600,
+          height: 300,
+
+          brush: {
+            width: 40,
+            color: 'rgba(200, 200, 50, 0.75)'
+          }
+        });
+
+        $('#exec').click(function () {
+          eval($('#console').val());
+        });
+
+        $('#console').keyup(function (e) {
+          if (e.keyCode == 13) eval($('#console').val());
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1>Graffiti-Core</h1>
+
+      <hr>
+
+      <div id="interactive">
+        <pre id="tutorial">Done:
+
+gc = new GraffitiCore({
+  selector: '#graffiti',
+
+  width: 600,
+  height: 300,
+
+  brush: {
+    width: 40,
+    color: 'rgba(200, 200, 50, 0.75)'
+  }
+});
+
+Do:
+
+gc.prev();
+gc.next();
+gc.clear();
+alert(gc.data());
+gc.setBrush({ 
+  width: 40, 
+  color: 'rgba(200, 200, 50, 0.75)'
+});</pre>
+
+        <input id="console" type="text">
+        <br>
+        <a id="exec" href="#">Execute</a>
+      </div>
+
+      <div id="graffiti"></div>
+    </div>
+  </body>
+</html>
+
