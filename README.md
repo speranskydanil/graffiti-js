@@ -14,6 +14,7 @@ Graffiti-Core is a base for graffiti application. It provides drawning and JavaS
 <div id="graffiti"></div>
 
 // initialization
+
 gc = new GraffitiCore({
   selector: '#graffiti',
 
@@ -43,8 +44,6 @@ gc.setBrush({
 ## Graffiti-Application
 
 Graffiti-Application is an example of using the core.
-
-### Get Start
 
 ```
 <link rel="stylesheet" href="css/graffiti-application.css">
