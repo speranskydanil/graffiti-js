@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Simple Graffiti by speranskydanil</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Simple Graffiti</h1>
+        <p>Simple-Graffiti is a JavaScript library which uses canvas.</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/speranskydanil/Simple-Graffiti" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/speranskydanil/Simple-Graffiti/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/speranskydanil/Simple-Graffiti/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a name="simple-graffiti" class="anchor" href="#simple-graffiti"><span class="octicon octicon-link"></span></a>Simple-Graffiti</h1>
+
+<p>Simple-Graffiti is a JavaScript library which uses canvas.
+It consists of two parts: core and example of it's usage.</p>
+
+<h2>
+<a name="graffiti-core" class="anchor" href="#graffiti-core"><span class="octicon octicon-link"></span></a>Graffiti-Core</h2>
+
+<p>Graffiti-Core is a base for graffiti application. It provides drawning and JavaScript API.</p>
+
+<pre><code>&lt;script src="js/jquery.js"&gt;&lt;/script&gt;
+&lt;script src="js/graffiti-core.js"&gt;&lt;/script&gt;
+
+&lt;div id="graffiti"&gt;&lt;/div&gt;
+
+// initialization
+
+gc = new GraffitiCore({
+  selector: '#graffiti',
+
+  width: 600,
+  height: 300,
+
+  brush: {
+    width: 40,
+    color: 'rgba(200, 200, 50, 0.75)'
+  }
+});
+
+// api
+
+gc.prev();
+gc.next();
+gc.clear();
+alert(gc.data());
+gc.setBrush({ 
+  width: 40, 
+  color: 'rgba(200, 200, 50, 0.75)'
+});
+</code></pre>
+
+<p><img src="https://raw.github.com/speranskydanil/Simple-Graffiti/master/screen-core.png" alt="screen"></p>
+
+<h2>
+<a name="graffiti-application" class="anchor" href="#graffiti-application"><span class="octicon octicon-link"></span></a>Graffiti-Application</h2>
+
+<p>Graffiti-Application is an example of using the core.</p>
+
+<pre><code>&lt;link rel="stylesheet" href="css/graffiti-application.css"&gt;
+
+&lt;script src="js/jquery.js"&gt;&lt;/script&gt;
+&lt;script src="js/graffiti-core.js"&gt;&lt;/script&gt;
+&lt;script src="js/graffiti-application.js"&gt;&lt;/script&gt;
+
+new GraffitiApplication({
+  selector: '.ga',
+
+  width: 600,
+  height: 300,
+
+  brush: {
+    width: 40,
+    color: 'rgba(200, 200, 50, 0.75)'
+  }
+});
+</code></pre>
+
+<p><img src="https://raw.github.com/speranskydanil/Simple-Graffiti/master/screen-application.png" alt="screen"></p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/speranskydanil">speranskydanil</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
