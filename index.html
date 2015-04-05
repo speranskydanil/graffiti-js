@@ -30,36 +30,35 @@ It consists of two parts: core and example of it's usage.</p>
 
 <p>Graffiti-Core is a base for graffiti application. It provides drawning and JavaScript API.</p>
 
-<pre><code>&lt;script src="js/jquery.js"&gt;&lt;/script&gt;
-&lt;script src="js/graffiti-core.js"&gt;&lt;/script&gt;
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/jquery.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/graffiti-core.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
 
-&lt;div id="graffiti"&gt;&lt;/div&gt;
+&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>graffiti<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
-// initialization
+<div class="highlight highlight-javascript"><pre><span class="pl-c">// initialization</span>
 
-gc = new GraffitiCore({
-  selector: '#graffiti',
+gc <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">GraffitiCore</span>({
+  selector<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>#graffiti<span class="pl-pds">'</span></span>,
 
-  width: 600,
-  height: 300,
+  width<span class="pl-k">:</span> <span class="pl-c1">600</span>,
+  height<span class="pl-k">:</span> <span class="pl-c1">300</span>,
 
-  brush: {
-    width: 40,
-    color: 'rgba(200, 200, 50, 0.75)'
+  brush<span class="pl-k">:</span> {
+    width<span class="pl-k">:</span> <span class="pl-c1">40</span>,
+    color<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>rgba(200, 200, 50, 0.75)<span class="pl-pds">'</span></span>
   }
 });
 
-// api
+<span class="pl-c">// api</span>
 
 gc.prev();
-gc.next();
-gc.clear();
-alert(gc.data());
+gc.<span class="pl-c1">next</span>();
+gc.<span class="pl-c1">clear</span>();
+<span class="pl-c1">alert</span>(gc.<span class="pl-c1">data</span>());
 gc.setBrush({ 
-  width: 40, 
-  color: 'rgba(200, 200, 50, 0.75)'
-});
-</code></pre>
+  width<span class="pl-k">:</span> <span class="pl-c1">40</span>, 
+  color<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>rgba(200, 200, 50, 0.75)<span class="pl-pds">'</span></span>
+});</pre></div>
 
 <p><img src="https://raw.github.com/speranskydanil/Simple-Graffiti/master/screen-core.png" alt="screen"></p>
 
@@ -68,24 +67,23 @@ gc.setBrush({
 
 <p>Graffiti-Application is an example of using the core.</p>
 
-<pre><code>&lt;link rel="stylesheet" href="css/graffiti-application.css"&gt;
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>css/graffiti-application.css<span class="pl-pds">"</span></span>&gt;
 
-&lt;script src="js/jquery.js"&gt;&lt;/script&gt;
-&lt;script src="js/graffiti-core.js"&gt;&lt;/script&gt;
-&lt;script src="js/graffiti-application.js"&gt;&lt;/script&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/jquery.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/graffiti-core.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/graffiti-application.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
 
-new GraffitiApplication({
-  selector: '.ga',
+<div class="highlight highlight-javascript"><pre><span class="pl-k">new</span> <span class="pl-en">GraffitiApplication</span>({
+  selector<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>.ga<span class="pl-pds">'</span></span>,
 
-  width: 600,
-  height: 300,
+  width<span class="pl-k">:</span> <span class="pl-c1">600</span>,
+  height<span class="pl-k">:</span> <span class="pl-c1">300</span>,
 
-  brush: {
-    width: 40,
-    color: 'rgba(200, 200, 50, 0.75)'
+  brush<span class="pl-k">:</span> {
+    width<span class="pl-k">:</span> <span class="pl-c1">40</span>,
+    color<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>rgba(200, 200, 50, 0.75)<span class="pl-pds">'</span></span>
   }
-});
-</code></pre>
+});</pre></div>
 
 <p><img src="https://raw.github.com/speranskydanil/Simple-Graffiti/master/screen-application.png" alt="screen"></p>
 
