@@ -7,12 +7,14 @@ It consists of two parts: core and example of it's usage.
 
 Graffiti-Core is a base for graffiti application. It provides drawning and JavaScript API.
 
-```
+```html
 <script src="js/jquery.js"></script>
 <script src="js/graffiti-core.js"></script>
 
 <div id="graffiti"></div>
+```
 
+```javascript
 // initialization
 
 gc = new GraffitiCore({
@@ -45,13 +47,15 @@ gc.setBrush({
 
 Graffiti-Application is an example of using the core.
 
-```
+```html
 <link rel="stylesheet" href="css/graffiti-application.css">
 
 <script src="js/jquery.js"></script>
 <script src="js/graffiti-core.js"></script>
 <script src="js/graffiti-application.js"></script>
+```
 
+```javascript
 new GraffitiApplication({
   selector: '.ga',
 
