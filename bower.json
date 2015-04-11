@@ -1,0 +1,33 @@
+{
+  "name": "graffiti-js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/speranskydanil/graffiti-js",
+  "authors": [
+    "Speransky Danil <speranskydanil@gmail.com>"
+  ],
+  "license": "MIT",
+  "description": "graffiti-js is a JavaScript library which uses canvas for drawing",
+  "main": [
+    "css/graffiti-app.css",
+    "js/graffiti-core.js",
+    "js/graffiti-app.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.11.2"
+  },
+  "keywords": [
+    "graffiti",
+    "draw",
+    "drawing",
+    "canvas",
+    "graphic",
+    "paint"
+  ]
+}
