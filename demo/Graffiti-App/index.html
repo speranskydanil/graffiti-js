@@ -1,58 +1,48 @@
-<!doctype>
+<!doctype html>
 
 <html>
   <head>
     <meta charset='utf-8'>
     <title>Graffiti-App</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/graffiti-app.css">
 
     <style>
-body {
+html, body {
+  height: 100%;
   margin: 0px;
   padding: 0px;
-  background: #333;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  color: #333;
+  font-size: 16px;
 }
 
 .wrapper {
-  width: 720px;
-  margin: 30px auto 0px;
-  padding: 30px;
-  border: 1px solid #aaa;
-  background: #f5f5f5;
-
-  -webkit-border-radius: 10px;
-     -moz-border-radius: 10px;
-          border-radius: 10px;
+  position: relative;
+  min-height: 100%;
 }
 
-.wrapper h1 {
-  margin: 0px 16px;
-  padding: 0px;
-  font-size: 32px;
-  line-height: 32px;
+.header {
+  padding: 20px;
+  background: #005500;
+  background-image: url(assets/bg.png);
+  font-size: 40px;
+  color: white;
+  text-align: center;
 }
 
-.wrapper hr {
-  height: 1px;
-  margin: 16px 0px;
-  padding: 0px;
-  border: none;
-  background: #d5d5d5;
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: #efe;
+  background-image: url(assets/bg.png);
+  text-align: center;
 }
 
-.wrapper a {
-  color: #08c;
-  text-decoration: none;
-}
-
-.wrapper a:hover {
-  color: #005580;
-  text-decoration: underline;
+.container {
+  padding: 20px 0px 82px 0px;
 }
     </style>
 
@@ -61,29 +51,37 @@ body {
     <script src="../../js/graffiti-app.js"></script>
 
     <script>
-      $(document).ready(function() {
-        new GraffitiApp({
-          selector: '.ga',
+$(document).ready(function() {
+  new GraffitiApp({
+    selector: '.ga',
 
-          width: 600,
-          height: 300,
+    width: 600,
+    height: 300,
 
-          brush: {
-            width: 40,
-            color: 'rgba(200, 200, 50, 0.75)'
-          }
-        });
-      });
+    brush: {
+      width: 40,
+      color: 'rgba(200, 200, 50, 0.75)'
+    }
+  });
+});
     </script>
   </head>
 
   <body>
     <div class="wrapper">
-      <h1>Graffiti-App</h1>
+      <div class="header">Graffiti-App</div>
 
-      <hr>
+      <div class="container">
+        <div class="ga"></div>
+      </div>
 
-      <div class="ga"></div>
+      <div class='footer'>
+        <strong>Author (Speransky Danil):</strong>
+        <a href="http://dsperansky.info">Personal Page</a> /
+        <a href="http://ru.linkedin.com/in/speranskydanil/en">LinkedIn</a> /
+        <a href="https://github.com/speranskydanil?tab=repositories">GitHub</a> /
+        <a href="http://stackoverflow.com/users/1550807/speransky-danil">StackOverflow</a>
+      </div>
     </div>
   </body>
 </html>
