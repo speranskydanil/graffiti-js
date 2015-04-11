@@ -49,7 +49,7 @@ gc.setBrush({
 
 Graffiti-App is an example of using the core.
 
-### <a href="http://speranskydanil.github.io/graffiti-js/demo/Graffiti-Core/index.html">DEMO</a>
+### <a href="http://speranskydanil.github.io/graffiti-js/demo/Graffiti-App/index.html">DEMO</a>
 
 ```html
 <link rel="stylesheet" href="css/graffiti-app.css">
