@@ -1,0 +1,138 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Graffiti-Core</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <style>
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+}
+
+.header {
+  padding: 20px;
+  background: #005500;
+  background-image: url(assets/bg.png);
+  font-size: 40px;
+  color: white;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: #efe;
+  background-image: url(assets/bg.png);
+  text-align: center;
+}
+
+.container {
+  padding: 20px 0px 82px 0px;
+}
+
+#graffiti {
+  padding: 1px;
+  border: 1px dashed #aaa;
+  background: #fff;
+}
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="../../js/graffiti-core.js"></script>
+
+    <script>
+$(document).ready(function() {
+  gc = new GraffitiCore({
+    selector: '#graffiti',
+
+    width: 600,
+    height: 300,
+
+    brush: {
+      width: 40,
+      color: 'rgba(200, 200, 50, 0.75)'
+    }
+  });
+
+  $('.exe').click(function () {
+    eval($('.cmd').val());
+  });
+
+  $('.cmd').keyup(function (e) {
+    if (e.keyCode == 13) eval($('.cmd').val());
+  });
+});
+    </script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="header">Graffiti-Core</div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <pre>
+// Performed Initialization
+
+gc = new GraffitiCore({
+  selector: '#graffiti',
+
+  width: 600,
+  height: 300,
+
+  brush: {
+    width: 40,
+    color: 'rgba(200, 200, 50, 0.75)'
+  }
+});
+
+// API
+
+gc.prev();
+gc.next();
+gc.clear();
+alert(gc.data());
+gc.setBrush({
+  width: 40,
+  color: 'rgba(200, 200, 50, 0.75)'
+});
+            </pre>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-inline">
+              <input class="cmd form-control" type="text" style="width: 450px">
+              <button class="exe btn btn-default">Execute</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="graffiti"></div>
+      </div>
+
+      <div class='footer'>
+        <strong>Author (Speransky Danil):</strong>
+        <a href="http://dsperansky.info">Personal Page</a> /
+        <a href="http://ru.linkedin.com/in/speranskydanil/en">LinkedIn</a> /
+        <a href="https://github.com/speranskydanil?tab=repositories">GitHub</a> /
+        <a href="http://stackoverflow.com/users/1550807/speransky-danil">StackOverflow</a>
+      </div>
+    </div>
+  </body>
+</html>
+
