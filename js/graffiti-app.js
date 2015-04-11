@@ -39,20 +39,20 @@ var GraffitiApp = (function ($) {
         <div class="ga-viewport"></div>\
         <div class="ga-nav">\
           <a href="#" class="prev">prev</a>\
-          |\
+          /\
           <a href="#" class="next">next</a>\
           <br>\
           <a href="#" class="clear">clear</a>\
-          |\
+          /\
           <a href="#" class="save">save</a>\
           <br>\
         </div>\
         <div class="ga-brush">\
-          <input type="text" class="width"> &nbsp;width<br>\
-          <input type="text" class="opacity"> &nbsp;opacity<br>\
-          <input type="text" class="red"> &nbsp;red<br>\
-          <input type="text" class="green"> &nbsp;green<br>\
-          <input type="text" class="blue"> &nbsp;blue<br>\
+          <input type="number" class="width"> &nbsp;width<br>\
+          <input type="number" step="0.01" class="opacity"> &nbsp;opacity<br>\
+          <input type="number" class="red"> &nbsp;red<br>\
+          <input type="number" class="green"> &nbsp;green<br>\
+          <input type="number" class="blue"> &nbsp;blue<br>\
         </div>\
       ');
 
