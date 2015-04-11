@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Simple Graffiti by speranskydanil</title>
+    <title>Graffiti JS by speranskydanil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -11,31 +11,35 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Simple Graffiti</h1>
-      <h2 class="project-tagline">Simple-Graffiti is a JavaScript library which uses canvas.</h2>
-      <a href="https://github.com/speranskydanil/Simple-Graffiti" class="btn">View on GitHub</a>
-      <a href="https://github.com/speranskydanil/Simple-Graffiti/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/speranskydanil/Simple-Graffiti/tarball/master" class="btn">Download .tar.gz</a>
+      <h1 class="project-name">Graffiti JS</h1>
+      <h2 class="project-tagline">graffiti-js is a JavaScript library which uses canvas for drawing.</h2>
+      <a href="https://github.com/speranskydanil/graffiti-js" class="btn">View on GitHub</a>
+      <a href="https://github.com/speranskydanil/graffiti-js/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/speranskydanil/graffiti-js/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
       <h1>
-<a id="simple-graffiti" class="anchor" href="#simple-graffiti" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple-Graffiti</h1>
+<a id="graffiti-js" class="anchor" href="#graffiti-js" aria-hidden="true"><span class="octicon octicon-link"></span></a>graffiti-js</h1>
 
-<p>Simple-Graffiti is a JavaScript library which uses canvas.
+<p>graffiti-js is a JavaScript library which uses canvas for drawing.
 It consists of two parts: core and example of it's usage.</p>
 
 <h2>
 <a id="graffiti-core" class="anchor" href="#graffiti-core" aria-hidden="true"><span class="octicon octicon-link"></span></a>Graffiti-Core</h2>
 
-<p>Graffiti-Core is a base for graffiti application. It provides drawning and JavaScript API.</p>
+<p>Graffiti-Core is a base for graffiti application. It provides drawing and JavaScript API.</p>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/jquery.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+<h3>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://speranskydanil.github.io/graffiti-js/demo/Graffiti-Core/index.html">DEMO</a>
+</h3>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://code.jquery.com/jquery-1.11.2.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
 &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/graffiti-core.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
 
 &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>graffiti<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-c">// initialization</span>
+<div class="highlight highlight-javascript"><pre><span class="pl-c">// Initialization</span>
 
 gc <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">GraffitiCore</span>({
   selector<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>#graffiti<span class="pl-pds">'</span></span>,
@@ -49,7 +53,7 @@ gc <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en"
   }
 });
 
-<span class="pl-c">// api</span>
+<span class="pl-c">// API</span>
 
 gc.prev();
 gc.<span class="pl-c1">next</span>();
@@ -63,17 +67,23 @@ gc.setBrush({
 <p><img src="https://raw.github.com/speranskydanil/Simple-Graffiti/master/screen-core.png" alt="screen"></p>
 
 <h2>
-<a id="graffiti-application" class="anchor" href="#graffiti-application" aria-hidden="true"><span class="octicon octicon-link"></span></a>Graffiti-Application</h2>
+<a id="graffiti-app" class="anchor" href="#graffiti-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Graffiti-App</h2>
 
-<p>Graffiti-Application is an example of using the core.</p>
+<p>Graffiti-App is an example of using the core.</p>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>css/graffiti-application.css<span class="pl-pds">"</span></span>&gt;
+<h3>
+<a id="demo-1" class="anchor" href="#demo-1" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://speranskydanil.github.io/graffiti-js/demo/Graffiti-Core/index.html">DEMO</a>
+</h3>
 
-&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/jquery.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>css/graffiti-app.css<span class="pl-pds">"</span></span>&gt;
+
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://code.jquery.com/jquery-1.11.2.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
 &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/graffiti-core.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
-&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/graffiti-application.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/graffiti-app.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
 
-<div class="highlight highlight-javascript"><pre><span class="pl-k">new</span> <span class="pl-en">GraffitiApplication</span>({
+&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>ga<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-k">new</span> <span class="pl-en">GraffitiApp</span>({
   selector<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>.ga<span class="pl-pds">'</span></span>,
 
   width<span class="pl-k">:</span> <span class="pl-c1">600</span>,
@@ -85,7 +95,7 @@ gc.setBrush({
   }
 });</pre></div>
 
-<p><img src="https://raw.github.com/speranskydanil/Simple-Graffiti/master/screen-application.png" alt="screen"></p>
+<p><img src="https://raw.github.com/speranskydanil/Simple-Graffiti/master/screen-app.png" alt="screen"></p>
 
 <p><strong>Author (Speransky Danil):</strong>
 <a href="http://dsperansky.info">Personal Page</a> |
@@ -94,7 +104,7 @@ gc.setBrush({
 <a href="http://stackoverflow.com/users/1550807/speransky-danil">StackOverflow</a></p>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/speranskydanil/Simple-Graffiti">Simple Graffiti</a> is maintained by <a href="https://github.com/speranskydanil">speranskydanil</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/speranskydanil/graffiti-js">Graffiti JS</a> is maintained by <a href="https://github.com/speranskydanil">speranskydanil</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
