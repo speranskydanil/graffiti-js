@@ -1,12 +1,12 @@
-var GraffitiApplication = (function ($) {
+var GraffitiApp = (function ($) {
   function Class(conf) {
     var init = conf.init || function () {};
     delete conf.init;
     init.prototype = conf;
     return init;
   };
-  
-  var GraffitiApplication = new Class({
+
+  var GraffitiApp = new Class({
     init: function (conf) {
       conf = this.initConf(conf);
 
@@ -20,7 +20,7 @@ var GraffitiApplication = (function ($) {
 
         width: 600,
         height: 300,
-          
+
         brush: {
           width: 40,
           color: 'rgba(200, 200, 50, 0.75)'
@@ -103,16 +103,16 @@ var GraffitiApplication = (function ($) {
       this.dom.brush.find('input').change(function (e) {
         self.gc.setBrush({
           width: parseInt(self.dom.brush.find('.width').val()),
-          color: 'rgba(' + 
-                 parseInt(self.dom.brush.find('.red').val()) + ',' + 
-                 parseInt(self.dom.brush.find('.green').val()) + ',' + 
-                 parseInt(self.dom.brush.find('.blue').val()) + ',' + 
+          color: 'rgba(' +
+                 parseInt(self.dom.brush.find('.red').val()) + ',' +
+                 parseInt(self.dom.brush.find('.green').val()) + ',' +
+                 parseInt(self.dom.brush.find('.blue').val()) + ',' +
                  parseFloat(self.dom.brush.find('.opacity').val()) + ')'
         });
       });
     }
   });
 
-  return GraffitiApplication;
+  return GraffitiApp;
 })(jQuery);
 

@@ -5,7 +5,7 @@ var GraffitiCore = (function ($) {
     init.prototype = conf;
     return init;
   };
-  
+
   var Curve = new Class({
     init: function (brush) {
       this.brush = brush;
@@ -27,13 +27,13 @@ var GraffitiCore = (function ($) {
       this.width = canvas.width;
       this.height = canvas.height;
     },
-   
+
     clear: function () {
       this.context.clearRect(0, 0, this.width, this.height);
     },
 
     data: function () {
-      return this.context.canvas.toDataURL('image/png'); 
+      return this.context.canvas.toDataURL('image/png');
     },
 
     draw: function (curve) {
@@ -44,7 +44,7 @@ var GraffitiCore = (function ($) {
 
       this.context.lineWidth = brush.width;
       this.context.strokeStyle = brush.color;
-  
+
       this.context.moveTo(points[0].x, points[0].y);
       this.context.lineTo(points[0].x - 0.5, points[0].y - 0.5);
 
@@ -57,7 +57,7 @@ var GraffitiCore = (function ($) {
       this.context.closePath();
     }
   });
-  
+
   var GraffitiCore = new Class({
     init: function (conf) {
       conf = this.initConf(conf);
@@ -73,7 +73,7 @@ var GraffitiCore = (function ($) {
 
         width: 600,
         height: 300,
-          
+
         brush: {
           width: 40,
           color: 'rgba(200, 200, 50, 0.75)'
@@ -86,16 +86,16 @@ var GraffitiCore = (function ($) {
 
       return _conf;
     },
-  
+
     buildDom: function (conf) {
       var wrapper = $(conf.selector);
-  
-      this.dom = { 
+
+      this.dom = {
         wrapper: wrapper.css({
           width: conf.width,
           height: conf.height
         }).empty(),
-  
+
         canvas: {
           common: $('<canvas>').attr({
             width: conf.width,
@@ -103,7 +103,7 @@ var GraffitiCore = (function ($) {
           }).css({
             display: 'block',
           }).appendTo(wrapper),
-  
+
           overlay:  $('<canvas>').attr({
             width: conf.width,
             height: conf.height
@@ -116,7 +116,7 @@ var GraffitiCore = (function ($) {
         }
       };
     },
-  
+
     initSystemObjects: function (conf) {
       this.system = {
         curve: undefined,
@@ -133,42 +133,42 @@ var GraffitiCore = (function ($) {
         historyIndex: -1
       };
     },
-  
+
     bindEvents: function (conf) {
       var s = this.system;
       var overlay = this.dom.canvas.overlay;
 
       var proceedCurveByEvent = function (e) {
         s.curve.push({
-          x: e.pageX - overlay.offset().left, 
+          x: e.pageX - overlay.offset().left,
           y: e.pageY - overlay.offset().top
         });
 
         s.canvas.overlay.clear();
         s.canvas.overlay.draw(s.curve);
       };
-  
+
       overlay.bind({
         mousedown: function (e) {
           s.inProcess = true;
           s.curve = new Curve(s.brush);
           proceedCurveByEvent(e);
         },
-  
+
         mousemove: function (e) {
           if (s.inProcess) {
             proceedCurveByEvent(e);
           }
         },
-  
+
         mouseup: function (e) {
           if (s.inProcess) {
             s.inProcess = false;
             proceedCurveByEvent(e);
-  
+
             s.canvas.overlay.clear();
             s.canvas.common.draw(s.curve);
-  
+
             s.historyIndex += 1;
             s.curves = s.curves.slice(0, s.historyIndex);
 
