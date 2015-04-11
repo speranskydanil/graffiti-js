@@ -1,21 +1,23 @@
-# Simple-Graffiti
+# graffiti-js
 
-Simple-Graffiti is a JavaScript library which uses canvas.
+graffiti-js is a JavaScript library which uses canvas for drawing.
 It consists of two parts: core and example of it's usage.
 
 ## Graffiti-Core
 
-Graffiti-Core is a base for graffiti application. It provides drawning and JavaScript API.
+Graffiti-Core is a base for graffiti application. It provides drawing and JavaScript API.
+
+### <a href="http://speranskydanil.github.io/graffiti-js/demo/Graffiti-Core/index.html">DEMO</a>
 
 ```html
-<script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="js/graffiti-core.js"></script>
 
 <div id="graffiti"></div>
 ```
 
 ```javascript
-// initialization
+// Initialization
 
 gc = new GraffitiCore({
   selector: '#graffiti',
@@ -29,7 +31,7 @@ gc = new GraffitiCore({
   }
 });
 
-// api
+// API
 
 gc.prev();
 gc.next();
@@ -43,20 +45,24 @@ gc.setBrush({
 
 ![screen](https://raw.github.com/speranskydanil/Simple-Graffiti/master/screen-core.png)
 
-## Graffiti-Application
+## Graffiti-App
 
-Graffiti-Application is an example of using the core.
+Graffiti-App is an example of using the core.
+
+### <a href="http://speranskydanil.github.io/graffiti-js/demo/Graffiti-Core/index.html">DEMO</a>
 
 ```html
-<link rel="stylesheet" href="css/graffiti-application.css">
+<link rel="stylesheet" href="css/graffiti-app.css">
 
-<script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="js/graffiti-core.js"></script>
-<script src="js/graffiti-application.js"></script>
+<script src="js/graffiti-app.js"></script>
+
+<div class="ga"></div>
 ```
 
 ```javascript
-new GraffitiApplication({
+new GraffitiApp({
   selector: '.ga',
 
   width: 600,
@@ -69,7 +75,7 @@ new GraffitiApplication({
 });
 ```
 
-![screen](https://raw.github.com/speranskydanil/Simple-Graffiti/master/screen-application.png)
+![screen](https://raw.github.com/speranskydanil/Simple-Graffiti/master/screen-app.png)
 
 **Author (Speransky Danil):**
 [Personal Page](http://dsperansky.info) |
